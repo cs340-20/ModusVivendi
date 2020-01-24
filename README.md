@@ -1,16 +1,22 @@
-# Install dependencies for server
-npm install
+## After cloning the repo these are the commands to get started:
 
-# Install dependencies for client
-npm run client-install
+Install dependencies for server: <br>
+`npm install`
 
-# Run the client & server with concurrently
-npm run dev
+Install dependencies for client: <br>
+`npm run client-install`
 
-# Run the Express server only
-npm run server
+Run the client & server with concurrently: <br>
+`npm run dev`
 
-# Run the React client only
-npm run client
+Run the Express server only: <br>
+`npm run server`
 
+<<<<<<< HEAD
 # Servers run on http://localhost:5000 and client on http://localhost:3000
+=======
+Run the React client only: <br>
+`npm run client`
+
+Server runs on http://localhost:5000 and client on http://localhost:3000
+>>>>>>> 70e6134aea909d950fa6e9cab2ae674d8c83acad
