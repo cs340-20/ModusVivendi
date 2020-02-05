@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
+import Navbar from 'react-bootstrap/Navbar'
+import logo from '../../images/MV_ondark.png'
 import "./navbar.css"
 
-export default class Navbar extends Component {
+let navbar_style = {
+    width: '80px',
+    height: '80px'
+}
+
+export default class MainNavbar extends Component {
 
     render() {
         return (
-            <h3>Test</h3>
+            <Navbar bg="dark" expand="lg">
+                <Navbar.Brand href="#"><img src={logo} style={navbar_style}></img>ModusVivendi</Navbar.Brand>
+            </Navbar>
         )
     }
 }
