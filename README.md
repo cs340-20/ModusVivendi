@@ -12,7 +12,6 @@ Run the client & server with concurrently: <br>
 Run the Express server only: <br>
 `npm run server`
 
-# Servers run on http://localhost:5000 and client on http://localhost:3000
 Run the React client only: <br>
 `npm run client`
 
