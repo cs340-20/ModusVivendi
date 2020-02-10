@@ -1,0 +1,13 @@
+.Input-form {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.All-forms {
+    background-color: #4EADE9;
+    font-weight: bold;
+    font-size: 150%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: white;
+}
