@@ -7,17 +7,17 @@ const Registration = (props) => {
   return (
     <Form className='All-forms'>
       <FormGroup>
-        <Label for="name">Name</Label>
+        <Label for="name">NAME</Label>
         <Input className='Input-form' type="fill-in" name="fill-in" id="name" />
       </FormGroup>
 
       <FormGroup>
-        <Label for="email">Email</Label>
+        <Label for="email">EMAIL</Label>
         <Input className='Input-form' type="fill-in" name="fill-in" id="email" />
       </FormGroup>
 
       <FormGroup>
-        <Label for="password">Password</Label>
+        <Label for="password">PASSWORD</Label>
         <Input className='Input-form' type="fill-in" name="fill-in" id="password" />
       </FormGroup>
 
