@@ -21,6 +21,15 @@ return(
                     onChange={e => setEmail(e.target.value)}
                 />   
             </FromGroup>
+            <FromGroup controlId = "password" bsSize="large">
+                <ControlLabel> Email </ControlLabel>
+                <FromControl
+                    autoFocus
+                    type="password"
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                />   
+            </FromGroup>
             <Button block bsSize="large" disable={!vaildateFrom()} type = "submit">
                 login
             </Button>
