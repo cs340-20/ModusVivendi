@@ -1,39 +1,20 @@
-import React, { components, useState } from 'react'
-import "./login.css"
+import React from 'react';
+import './login.css'
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
-export default function login(props){
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-    function vaildateFrom(){
-        return email.lenght > 0 && password.lenght > 0;
-    }
-
-return(
-    <div className = "Login">
-        <form onSubmit={handleSubmit}>
-            <FromGroup controlId = "email" bsSize="large">
-                <ControlLabel> Email </ControlLabel>
-                <FromControl
-                    autoFocus
-                    type="email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                />   
-            </FromGroup>
-            <FromGroup controlId = "password" bsSize="large">
-                <ControlLabel> Email </ControlLabel>
-                <FromControl
-                    autoFocus
-                    type="password"
-                    value={password}
-                    onChange={e => setPassword(e.target.value)}
-                />   
-            </FromGroup>
-            <Button block bsSize="large" disable={!vaildateFrom()} type = "submit">
-                login
-            </Button>
-        </form>
-    </div>   
-);
+const Loginpage = (props) => {
+  return (
+    <Form>
+      <FormGroup>
+        <Label for="exampleEmail">Email</Label>
+        <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+      </FormGroup>
+      <FormGroup>
+        <Label for="examplePassword">Password</Label>
+        <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+      </FormGroup>
+    </Form>
+   );
 }
+export default Loginpage;
+
