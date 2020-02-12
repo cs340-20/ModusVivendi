@@ -1,6 +1,6 @@
 import React from 'react';
-import './Registration.css'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import './Registration.css'
 // npm install --save reactstrap
 
 const Registration = (props) => {
@@ -14,7 +14,7 @@ const Registration = (props) => {
       <FormGroup>
         <Label for="email">EMAIL</Label>
         <Input className='Input-form' type="fill-in" name="fill-in" id="email" />
-      </FormGroup>
+      </FormGroup> 
 
       <FormGroup>
         <Label for="password">PASSWORD</Label>
