@@ -73,7 +73,7 @@ const Registration = (props) => {
         <Input className='Input-form' type="fill-in" name="fill-in" id="deadlift" />
       </FormGroup>
 
-      <Button style={{ backgroundColor: 'black', marginBottom: 15 }}>Register</Button>
+      <Button style={{ backgroundColor: '#55595c', color: 'white', fontSize: 20 }}>Register</Button>
     </Form>
   );
 }
