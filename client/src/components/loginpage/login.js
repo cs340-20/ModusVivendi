@@ -10,23 +10,23 @@ const Loginpage = (props) => {
   return (
     <div>
       
-      <Form>
+      <Form className='all-form'>
         <FormGroup>
           <Label for="Email">Email</Label>
-          <Input type="email" name="email" id="email" placeholder="with a placeholder" />
+          <Input className= 'Input-form' type="email" name="email" id="email" placeholder="with a placeholder" />
         </FormGroup>
 
         <FormGroup>
           <Label for="Password">Password</Label>
-          <Input type="password" name="password" id="password" placeholder="password placeholder" />
+          <Input className= 'Input-form' type="password" name="password" id="password" placeholder="password placeholder" />
         </FormGroup>
 
-        <Button className="btn-lg btn-dark btn-block">
+        <Button className= 'Input-form' >
           Login
         </Button>
         
         <Router> 
-          <Link className= "btn-lg btn-dark btn-block" type="submit" to="/registration">
+          <Link className= "Input-form" type="submit" to="/registration">
             Registration
           </Link>
           <Switch>
