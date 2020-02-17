@@ -16,7 +16,6 @@ export default class MainNavbar extends Component {
     render() {
         return (  
         <div>
-            <Router>
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-1">
                     <a class="navbar-brand" href="#"><img src={logo} alt="ModusVivendi"></img></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,15 +40,6 @@ export default class MainNavbar extends Component {
                         </form>
                     </div>
                 </nav>
-                <Switch>
-                <Route path="/login">
-                    <Loginpage />
-                </Route>
-                <Route path="/workout">
-                    <Workout />
-                </Route>
-            </Switch>
-            </Router>
         </div>  
         )
     }

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import React from 'react'
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
 import './Registration.css'
 // npm install --save reactstrap
 

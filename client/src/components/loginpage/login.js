@@ -25,16 +25,10 @@ const Loginpage = (props) => {
           Login
         </Button>
         
-        <Router> 
-          <Link className= "Input-form" type="submit" to="/registration">
-            Registration
-          </Link>
-          <Switch>
-            <Route path="/registration">
-              <Registration />
-            </Route>
-          </Switch>
-        </Router>
+        <Link className= "Input-form" type="submit" to="/registration">
+          Registration
+        </Link>
+      
     </Form>
       
     </div>
