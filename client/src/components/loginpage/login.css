@@ -3,10 +3,10 @@
   width: 30%;
   padding: 30px;
 }*/
-.all-form{
+/* .all-form{
   width: 35%;
   padding: 30px;
-}
+} */
 .Input-form {
   border: 0;
   background: none;
@@ -17,7 +17,7 @@
   padding: 14px 10px;
   width: 35%;
   outline: none;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 24px;
   transition: 0.25s;
 
