@@ -9,6 +9,7 @@ import logo from '../../images/MV_resize.png'
 import "../../bootstrap/dist/css/bootstrap.min.css"
 import "./navbar.css"
 import Loginpage from '../loginpage/login'
+import Workout from '../Workout/Workout'
 
 export default class MainNavbar extends Component {
 
@@ -30,7 +31,7 @@ export default class MainNavbar extends Component {
                             <Link to="/diet" className="nav-link">Diet</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to="/workout" className="nav-link">Workout</Link>
+                            <Link to="/workout" className="nav-link" type="submit" to="/workout">Workout</Link>
                         </li>
                         </ul>
                         <form class="form-inline my-2 my-lg-0">
@@ -43,6 +44,9 @@ export default class MainNavbar extends Component {
                 <Switch>
                 <Route path="/login">
                     <Loginpage />
+                </Route>
+                <Route path="/workout">
+                    <Workout />
                 </Route>
             </Switch>
             </Router>
