@@ -13,12 +13,12 @@ const Loginpage = (props) => {
       <Form className='all-form'>
         <FormGroup>
           <Label for="Email">Email</Label>
-          <Input className= 'Input-form' type="email" name="email" id="email" placeholder="with a placeholder" />
+          <Input className= 'Input-form' type="email" name="email" id="email" placeholder="Your Email" />
         </FormGroup>
 
         <FormGroup>
           <Label for="Password">Password</Label>
-          <Input className= 'Input-form' type="password" name="password" id="password" placeholder="password placeholder" />
+          <Input className= 'Input-form' type="password" name="password" id="password" placeholder="Your Password" />
         </FormGroup>
 
         <Button className= 'Input-form' >
