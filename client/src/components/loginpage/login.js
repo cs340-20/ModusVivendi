@@ -17,12 +17,12 @@ const Loginpage = (props) => {
                 <Input className= 'Input-form' type="password" name="password" id="password" placeholder="Your Password" />
             </FormGroup>
 
-            <Button className= 'Input-form' >
-                Login
+            <Button className= "Input-form" >
+                LOGIN
             </Button>
             
             <Link className= "Input-form" type="submit" to="/registration">
-                Registration
+                REGISTRATION
             </Link>
         </Form>
     </div>
