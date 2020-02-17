@@ -1,20 +1,45 @@
 import React from 'react';
+
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+
+import { Switch, Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import './login.css'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import Registration from '../Registration/Registration';
 
 const Loginpage = (props) => {
   return (
-    <Form>
-      <FormGroup>
-        <Label for="exampleEmail">Email</Label>
-        <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="examplePassword">Password</Label>
-        <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
-      </FormGroup>
+    <div>
+      
+      <Form className='all-form'>
+        <FormGroup>
+          <Label for="Email">Email</Label>
+          <Input className= 'Input-form' type="email" name="email" id="email" placeholder="with a placeholder" />
+        </FormGroup>
+
+        <FormGroup>
+          <Label for="Password">Password</Label>
+          <Input className= 'Input-form' type="password" name="password" id="password" placeholder="password placeholder" />
+        </FormGroup>
+
+        <Button className= 'Input-form' >
+          Login
+        </Button>
+        
+        <Router> 
+          <Link className= "Input-form" type="submit" to="/registration">
+            Registration
+          </Link>
+          <Switch>
+            <Route path="/registration">
+              <Registration />
+            </Route>
+          </Switch>
+        </Router>
     </Form>
+      
+    </div>
    );
 }
+
 export default Loginpage;
 

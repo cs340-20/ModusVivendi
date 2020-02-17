@@ -1,14 +1,24 @@
-.Input-form{
-    width: 30%;
-    margin: 0 auto;
-    max-width: 320px;
 
+/*.Input-form {
+  width: 30%;
+  padding: 30px;
+}*/
+.all-form{
+  width: 30;
+  padding: 30px;
 }
-.All-forms{
-    background-color: #4EADE9;
-    font-weight: bold;
-    font-size: 150%;
-    border-style: solid;
-    border-width: 10px;
-    border-color: white;
+.Input-form {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #95afc0;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+
 }
