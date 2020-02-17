@@ -24,7 +24,9 @@ const Loginpage = (props) => {
         <Button className= 'Input-form' >
           Login
         </Button>
-        
+        <br>
+        <br>
+   
         <Router> 
           <Link className= "Input-form" type="submit" to="/registration">
             Registration
