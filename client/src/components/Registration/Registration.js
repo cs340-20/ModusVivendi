@@ -25,7 +25,7 @@ const Registration = (props) => {
             <Label for="goal">What is your primary fitness goal?</Label>
             <Input className='Input-form' type="select" name="select" id="goal">
             <option>Lose weight</option>
-            <option>Gain weight</option>
+            <option>Gain muscle</option>
             <option>Maintain muscle and weight</option>
             </Input>
         </FormGroup>

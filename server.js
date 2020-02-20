@@ -6,7 +6,7 @@ app.get('/api/customers', (req, res) => {
 	const customers = [
 		{
 			name: 'John Doe', 
-			primary_goal: 'Lose weight', 
+			primary_goal: 'Gain muscle', 
 			gender: 'Male',
 			age: 21,
 			height: 69,
