@@ -54,7 +54,7 @@ class Workout extends Component {
               <p>Your customized workout is based on a weekly full body routine. The exercises</p>
               <p>below will be performed on Monday, Tuesday, Thursday and Friday. Your off days</p>
               <p>are Wednesday, Saturday and Sunday. You may add accessory exercises on your off</p>
-              <p>days of after your workouts, but it's suggested that you take one full day off</p>
+              <p>days or after your workouts, but it's suggested that you take one full day off</p>
               <p>after working out for two consecutive days. On Monday your lifts will be based</p>
               <p>on a percentage of your max, and the percentage will increase on Tuesday and then</p>
               <p>again on Thursday. On Friday you will deload and the percentage of weight you will</p>
