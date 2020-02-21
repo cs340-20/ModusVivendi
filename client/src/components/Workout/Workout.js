@@ -6,14 +6,14 @@ class Workout extends Component {
   constructor() {
     super();
     this.state = {
-      customers: []
+      users: []
     };
   }
 
   componentDidMount() {
-    fetch('/api/customers')
+    fetch('/api/users')
       .then(res => res.json())
-      .then(customers => this.setState({customers}, () => console.log('Customers fetched...', customers)));
+      .then(users => this.setState({users}, () => console.log('Users fetched...', users)));
   }
 
   // Returns an int, 1-7, with 1 being Monday ..., and 7 being Sunday.
@@ -47,10 +47,10 @@ class Workout extends Component {
   render() {
     return (
       <div>
-          {this.state.customers.map(customer =>
+          {this.state.users.map(user =>
             <div className="workout">
-              <h1>Hello {customer.name}</h1>
-              <h2>Since your primary goal is to {customer.primary_goal}:</h2>
+              <h1>Hello {user.name}</h1>
+              <h2>Since your primary goal is to {user.primary_goal}:</h2>
               <p>Your customized workout is based on a weekly full body routine. The exercises</p>
               <p>below will be performed on Monday, Tuesday, Thursday and Friday. Your off days</p>
               <p>are Wednesday, Saturday and Sunday. You may add accessory exercises on your off</p>
@@ -60,7 +60,7 @@ class Workout extends Component {
               <p>again on Thursday. On Friday you will deload and the percentage of weight you will</p>
               <p>lift will be less than the percentage you did on Monday.</p>
               <h2>It's { this.stringDay(this.intDay()) }</h2>
-              <WorkoutTable table={ customer.name }/>
+              <WorkoutTable table={ user.name }/>
             </div>
           )}
       </div>
