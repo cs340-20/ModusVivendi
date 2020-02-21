@@ -6,14 +6,14 @@ import './login.css'
 const Loginpage = (props) => {
     return (
     <div>
-        <Form className='all-form'>
+        <Form >
             <FormGroup>
-                <Label for="Email">Email</Label>
+                <Label className='all-form' for="Email">Email</Label>
                 <Input className= 'Input-form' type="email" name="email" id="email" placeholder="Your Email" />
             </FormGroup>
 
             <FormGroup>
-                <Label for="Password">Password</Label>
+                <Label className='all-form' for="Password">Password</Label>
                 <Input className= 'Input-form' type="password" name="password" id="password" placeholder="Your Password" />
             </FormGroup>
 

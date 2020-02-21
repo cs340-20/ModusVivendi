@@ -3,11 +3,13 @@
   width: 30%;
   padding: 30px;
 }*/
-/* .all-form{
+.all-form{
+  display: block;
+  text-align: center;
+  margin: 20px auto;
   width: 35%;
-  margin: auto 0;
   padding: 30px;
-} */
+} 
 .Input-form {
   border: 0;
   background: none;
