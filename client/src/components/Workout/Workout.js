@@ -74,7 +74,7 @@ class Workout extends Component {
           )}
       </div>
       
-    );
+ //   );
   }
 }
 
