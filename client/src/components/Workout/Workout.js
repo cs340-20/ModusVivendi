@@ -46,10 +46,13 @@ class Workout extends Component {
 
   render() {
     return (
-      <div>
+     <div>
           {this.state.users.map(user =>
-            <div className="workout">
+           
+           <div className="heading">
               <h1>Hello {user.name}</h1>
+              </div>
+               <div className="workout">
               <h2>Since your primary goal is to {user.primary_goal}:</h2>
               <p>Your customized workout is based on a weekly full body routine. The exercises</p>
               <p>below will be performed on Monday, Tuesday, Thursday and Friday. Your off days</p>
