@@ -52,6 +52,8 @@ class Workout extends Component {
            <div className="heading">
               <h1>Hello {user.name}</h1>
               </div>
+              
+               <div>
                <div className="workout">
               <h2>Since your primary goal is to {user.primary_goal}:</h2>
               <p>Your customized workout is based on a weekly full body routine. The exercises</p>
