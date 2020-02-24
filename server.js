@@ -13,9 +13,9 @@ const users = [
 		height: 69,
 		weight: 200,
 		max_bench: 300, 
-		max_squat: 400,
+		max_squat: 350,
 		max_press: 150,
-		max_deadlift: 500, 
+		max_deadlift: 400, 
 		daily_calories: 3000
 	},
 ];
