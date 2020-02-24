@@ -16,7 +16,7 @@ class Workout extends Component {
       .then(users => this.setState({users}, () => console.log('Users fetched...', users)));
   }
 
-  // Returns an int, 1-7, with 1 being Monday ..., and 7 being Sunday.
+  // Returns an int, 0-6, with 1 being Monday ..., and 0 being Sunday.
   intDay() {
     var d = new Date();
     var n = d.getDay()
@@ -60,7 +60,12 @@ class Workout extends Component {
               <p>again on Thursday. On Friday you will deload and the percentage of weight you will</p>
               <p>lift will be less than the percentage you did on Monday.</p>
               <h2>It's { this.stringDay(this.intDay()) }</h2>
-              <WorkoutTable table={ user.name }/>
+              <WorkoutTable bench={ user.max_bench } 
+                            op={ user.max_press }
+                            dead={ user.max_deadlift }
+                            squat={ user.max_squat }
+                            day={ this.intDay() }
+              />
             </div>
           )}
       </div>
