@@ -1,26 +1,21 @@
-
-/*.Input-form {
-  width: 30%;
-  padding: 30px;
-}*/
 .all-form{
-  display: block;
-  text-align: center;
-  margin: 20px auto; 
-  width: 35%;
+    display: block;
+    text-align: center;
+    margin: 20px auto; 
+    width: 35%;
 } 
 .Input-form {
-  border: 0;
-  background: none;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #95afc0;
-  padding: 14px 10px;
-  width: 35%;
-  outline: none;
-  color: rgb(0, 0, 0);
-  border-radius: 24px;
-  transition: 0.25s;
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #95afc0;
+    padding: 14px 10px;
+    width: 35%;
+    outline: none;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s;
 
 }
