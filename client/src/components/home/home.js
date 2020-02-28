@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
            return(
              <div className="heading">
-            Hello  
+          WELCOME TO MODUS VIVENDI 
             </div>
    
     );
