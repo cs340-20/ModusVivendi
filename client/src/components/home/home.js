@@ -4,7 +4,7 @@ import './home.css'
 
 export default class Home extends Component {
 
-    render() {
+    render() (
            return{
              <div className="heading">
              <h1>Hello</h1>
@@ -14,7 +14,7 @@ export default class Home extends Component {
               />
             </div>
    
-    };
+    );
     }
 }
 export default Home;
