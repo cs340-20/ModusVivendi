@@ -1,6 +1,11 @@
 @font-face {
   font-family: main;
   src: url(https://github.com/cs340-20/ModusVivendi/blob/master/client/src/components/home/Fonts/Gotham%20Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: sec;
+  src: url(https://github.com/cs340-20/ModusVivendi/blob/master/client/src/components/home/Fonts/GothamThin1.woff);
 }
 
 .heading {
@@ -14,5 +19,5 @@
 .paragraph {
     text-align: center; 
     font-size: 20px;
-    font-face: main;
+    font-face: sec;
 }
