@@ -1,7 +1,11 @@
+@font-face {
+  font-family: main;
+  src: url(https://github.com/cs340-20/ModusVivendi/blob/master/client/src/components/home/Fonts/GothamUltraIta.woff);
+}
+
 .heading {
     text-align: center; 
      font-weight: bold;
     font-size: 50px;
-      font-family: GothemUltraIta;
-  src: url(https://github.com/cs340-20/ModusVivendi/blob/master/client/src/components/home/Fonts/GothamUltraIta.woff);
+    font-face: main;
 }
