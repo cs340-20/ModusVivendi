@@ -9,6 +9,9 @@ class Home extends Component {
              <div className="heading">
           WELCOME TO MODUS VIVENDI 
             </div>
+                  <div className="paragraph">
+          Are you ready to lose some wieght or again some muscle mass? You are in the right place. 
+            </div>
    
     );
     }
