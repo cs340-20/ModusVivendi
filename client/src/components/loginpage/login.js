@@ -25,7 +25,7 @@ function login(email, password) {
     fetch('/api/login/', {
         method: 'POST',
         headers: {
-            Accept: 'application/json',
+            'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -33,7 +33,9 @@ function login(email, password) {
             password: password
         })
     }).then((resp) => {
-        
+        console.log('resp ' + resp.json)
+        if(resp === 'invalid_username') 
+            alert('Invalid Username')
     })
     
     

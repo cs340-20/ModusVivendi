@@ -1,10 +1,13 @@
 const express = require('express');
+const body_parser = require("body-parser")
 
 const app = express();
+app.use(body_parser.urlencoded({extended: false}))
+app.use(body_parser.json())
 
 const users = [
 	{
-		username: 'johndoe69',
+		username: 'johndoe',
 		password: 'test123',
 		name: 'John Doe', 
 		primary_goal: 'Gain muscle', 
@@ -25,8 +28,24 @@ app.get('/api/users', (req, res) => {
 
 });
 
-app.post('/api/login/', (req, res) => {
-	console.log(req.body)
+app.post('/api/login/', (req, res)  => {
+	
+	/* Very vulnerable code. Just for testing purposes */
+	const username = req.body.username
+	const password = req.body.password
+
+	if(username === users[0].username) {
+
+		if(password === users[0].password) {
+			console.log("Logging in " + username)
+		} else {
+			res.send('invalid_password')
+			//window.alert("Invalid password for username " + username)
+		}
+	} else {
+		res.send('invalid_username')
+		//window.alert("Invalid username " + username)
+	}
 })
 
 
