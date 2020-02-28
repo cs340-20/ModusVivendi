@@ -6,14 +6,15 @@ class Home extends Component {
 
     render() {
            return(
-               <div>
+        <div>
              <div className="heading">
-          WELCOME TO MODUS VIVENDI 
+                 WELCOME TO MODUS VIVENDI 
             </div>
-                  <div className="paragraph">
-          Are you ready to lose some wieght or again some muscle mass? You are in the right place. 
+             <div className="paragraph">
+                 Are you ready to lose some wieght or again some muscle mass? You are in the right place. 
             </div>       
-               </div>
+          
+         </div>
    
     );
     }
