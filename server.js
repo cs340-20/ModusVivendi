@@ -1,10 +1,13 @@
 const express = require('express');
+const body_parser = require("body-parser")
 
 const app = express();
+app.use(body_parser.urlencoded({extended: false}))
+app.use(body_parser.json())
 
 const users = [
 	{
-		username: 'johndoe69',
+		username: 'johndoe@gmail.com',
 		password: 'test123',
 		name: 'John Doe', 
 		primary_goal: 'Gain muscle', 
@@ -25,8 +28,10 @@ app.get('/api/users', (req, res) => {
 
 });
 
-app.post('/api/login/', (req, res) => {
-	console.log(req.body)
+app.post('/api/login/', (req, res)  => {
+	const email = req.body.email
+	const password = req.body.password
+
 })
 
 
