@@ -7,7 +7,7 @@ app.use(body_parser.json())
 
 const users = [
 	{
-		username: 'johndoe@gmail.com',
+		username: 'johndoe',
 		password: 'test123',
 		name: 'John Doe', 
 		primary_goal: 'Gain muscle', 
@@ -29,9 +29,21 @@ app.get('/api/users', (req, res) => {
 });
 
 app.post('/api/login/', (req, res)  => {
-	const email = req.body.email
+	
+	/* Very vulnerable code. Just for testing purposes */
+	const username = req.body.username
 	const password = req.body.password
 
+	if(username === users[0].username) {
+
+		if(password === users[0].password) {
+			console.log("Logging in " + username)
+		} else {
+			alert("Invalid password for username " + username)
+		}
+	} else {
+		alert("Invalid username " + username)
+	}
 })
 
 
