@@ -39,10 +39,12 @@ app.post('/api/login/', (req, res)  => {
 		if(password === users[0].password) {
 			console.log("Logging in " + username)
 		} else {
-			alert("Invalid password for username " + username)
+			res.send('invalid_password')
+			//window.alert("Invalid password for username " + username)
 		}
 	} else {
-		alert("Invalid username " + username)
+		res.send('invalid_username')
+		//window.alert("Invalid username " + username)
 	}
 })
 

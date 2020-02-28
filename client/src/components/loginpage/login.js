@@ -33,7 +33,9 @@ function login(email, password) {
             password: password
         })
     }).then((resp) => {
-        
+        console.log('resp ' + resp.json)
+        if(resp === 'invalid_username') 
+            alert('Invalid Username')
     })
     
     
