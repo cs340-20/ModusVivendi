@@ -8,10 +8,10 @@ class Home extends Component {
            return(
         <div>
              <div className="heading">
-                 WELCOME TO MODUS VIVENDI 
+                 welcome to modus vivendi
             </div>
              <div className="paragraph">
-                 Are you ready to lose some wieght or again some muscle mass? You are in the right place. 
+                 Are you ready to lose some wieght or gain some muscle mass? You are in the right place. 
             </div>       
           
          </div>
