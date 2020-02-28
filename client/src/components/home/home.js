@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap'
-import './Home.css'
+import './home.css'
 
 export default class Home extends Component {
 
