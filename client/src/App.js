@@ -14,7 +14,7 @@ function App() {
         <Router>
             <MainNavbar />
             <Switch>
-                <Route path="/" component={Home} />
+                <Route exact path="/" component={Home} />
                 <Route path="/home" component={Home} />
                 <Route path="/registration" component={Registration} />
                 <Route path="/login" component={Loginpage} />
