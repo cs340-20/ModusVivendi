@@ -11,7 +11,7 @@ class Home extends Component {
   
               <h2>Since your primary goal is to {user.primary_goal}:</h2>
 
-              />
+        
             </div>
    
     );
