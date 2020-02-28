@@ -49,7 +49,7 @@ class Workout extends Component {
      <div>
           {this.state.users.map(user =>
                <div className="workout">
-              <h1>Hello {user.name}</h1>
+              <h1>Hello {user.name}!</h1>
         
         
       
