@@ -7,11 +7,7 @@ class Home extends Component {
     render() {
            return(
              <div className="heading">
-            Hello
-  
-              <h2>Since your primary goal is to :</h2>
-
-        
+            Hello  
             </div>
    
     );
