@@ -5,6 +5,15 @@ import './home.css'
 export default class Home extends Component {
 
     render() {
+ 
+             <div className="workout">
+             <h1>Hello</h1>
+  
+              <h2>Since your primary goal is to {user.primary_goal}:</h2>
+
+              />
+            </div>
+   
         
     }
 }
