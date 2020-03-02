@@ -7,7 +7,12 @@
   font-family: sec;
   src: url(https://github.com/cs340-20/ModusVivendi/blob/master/client/src/components/home/Fonts/GothamThin1.woff);
 }
-
+.logo {
+    text-align: center; 
+    font-size: 100px;
+    font-face: main;
+    padding-top: 250px;
+}
 .heading {
     text-align: center; 
     font-size: 50px;
