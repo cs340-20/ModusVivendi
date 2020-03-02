@@ -28,6 +28,7 @@ function App() {
                 <AppliedRoute path="/registration" component={Registration} appProps={appProps} />
                 <AppliedRoute path="/login" component={Loginpage} appProps={appProps} />
                 <AppliedRoute path="/workout" component={Workout} appProps={appProps} />
+                <AppliedRoute path="/diet" component={Diet} appProps={appProps} />
             </Switch>
         </Router>
     </div>
