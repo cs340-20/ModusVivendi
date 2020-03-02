@@ -11,6 +11,9 @@ class Home extends Component {
           
          
          <div>
+              <div className="logo">
+              MV
+            </div>
              <div className="heading">
                 WELCOME TO MODUS VIVENDI
             </div>
