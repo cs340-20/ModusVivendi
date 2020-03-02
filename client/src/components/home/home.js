@@ -7,8 +7,8 @@ class Home extends Component {
     render() {
    
      return(
-        // <img id="myImg" src="https://github.com/cs340-20/ModusVivendi/blob/master/client/src/images/MV_onlight.png" alt="" width="304" height="228">        
-          var filename = "https://github.com/cs340-20/ModusVivendi/blob/master/client/src/images/MV_onlight.png";element.innerHTML = "<img src='" + filename + "'>"
+//https://github.com/cs340-20/ModusVivendi/blob/master/client/src/images/MV_onlight.png       
+          
          
          <div>
              <div className="heading">
