@@ -1,0 +1,25 @@
+@font-face {
+  font-family: main;
+  src: url(https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css);
+  font-weight: bold;
+}
+@font-face {
+  font-family: sec;
+  src: url(https://github.com/cs340-20/ModusVivendi/blob/master/client/src/components/home/Fonts/GothamThin1.woff);
+}
+
+
+h1, p {
+    text-align: center;
+    font-face:main;
+}
+
+.diet {
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-face: sec;
+}
