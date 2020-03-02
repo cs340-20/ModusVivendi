@@ -12,7 +12,7 @@ class Home extends Component {
          
          <div>
               <div className="logo">
-              MV
+            <b>  MV </b>
             </div>
              <div className="heading">
                 WELCOME TO MODUS VIVENDI
