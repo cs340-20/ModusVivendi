@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './login.css'
 
 /* Attempt a login request */
-function login(email, password) {
+function login(email, password, props) {
     
     /* Error check for no email/password */
     if(email === undefined || email === null || email === '') {
@@ -33,12 +33,16 @@ function login(email, password) {
             password: password
         })
     }).then((resp) => {
-        console.log('resp ' + resp.json)
-        if(resp === 'invalid_username') 
+        return resp.text()
+    }).then((data) => {
+        if(data === 'invalid_username')
             alert('Invalid Username')
+        else if(data === 'invalid_password')
+            alert('Invalid Password')
+        else if(data === 'logged_in') {
+            props.user_has_authenticated(true)
+        }
     })
-    
-    
 }
 
 const Loginpage = (props) => {
@@ -55,7 +59,7 @@ const Loginpage = (props) => {
                 <Input className= 'Input-form' type="password" name="password" id="password" placeholder="Your Password" />
             </FormGroup>
 
-            <Button className= "Input-form" onClick={() => { login(document.getElementById('email').value, document.getElementById('password').value) }}>
+            <Button className= "Input-form" onClick={() => { login(document.getElementById('email').value, document.getElementById('password').value, props) }}>
                 LOGIN
             </Button>
             

@@ -38,6 +38,7 @@ app.post('/api/login/', (req, res)  => {
 
 		if(password === users[0].password) {
 			console.log("Logging in " + username)
+			res.send('logged_in')
 		} else {
 			res.send('invalid_password')
 			//window.alert("Invalid password for username " + username)

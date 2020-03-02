@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import MainNavbar from './components/navbar/navbar'
@@ -7,18 +7,26 @@ import Loginpage from './components/loginpage/login'
 import Workout from './components/Workout/Workout'
 import Home from './components/home/home'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import AppliedRoute from './components/AppliedRoute'
+
 
 function App() {
+
+    /* State variables */
+    const [is_authenticated, user_has_authenticated] = useState(false)
+
+    const appProps = {is_authenticated, user_has_authenticated}
+
     return (
     <div className="App">
-        <Router>
+        <Router appProps={{is_authenticated, user_has_authenticated}}>
             <MainNavbar />
             <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/home" component={Home} />
-                <Route path="/registration" component={Registration} />
-                <Route path="/login" component={Loginpage} />
-                <Route path="/workout" component={Workout} />
+                <AppliedRoute exact path="/" component={Home} appProps={appProps} />
+                <AppliedRoute path="/home" component={Home} appProps={appProps} />
+                <AppliedRoute path="/registration" component={Registration} appProps={appProps} />
+                <AppliedRoute path="/login" component={Loginpage} appProps={appProps} />
+                <AppliedRoute path="/workout" component={Workout} appProps={appProps} />
             </Switch>
         </Router>
     </div>
