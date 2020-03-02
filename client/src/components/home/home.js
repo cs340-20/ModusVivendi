@@ -5,20 +5,9 @@ import './home.css'
 class Home extends Component {
 
     render() {
-           return(
-      var img = new Image();
-var div = document.getElementById('x');
- 
- 
-img.onload = function() {
- 
-  div.innerHTML += '<img src="'+img.src+'" />'; 
- 
-};
- 
- 
-img.src = 'https://github.com/cs340-20/ModusVivendi/blob/master/client/src/images/MV_onlight.png';
-               
+   
+     return(
+         <img id="myImg" src="https://github.com/cs340-20/ModusVivendi/blob/master/client/src/images/MV_onlight.png" alt="The Pulpit Rock" width="304" height="228">        
           <div>
              <div className="heading">
                 WELCOME TO MODUS VIVENDI
