@@ -45,35 +45,42 @@ class Workout extends Component {
   }
 
   render() {
-    return (
-     <div>
-          {this.state.users.map(user =>
-               <div className="workout">
-              <h1>Hello {user.name}!</h1>
-        
-        
-      
-              <h2>Since your primary goal is to {user.primary_goal}:</h2>
-              <p>Your customized workout is based on a weekly full body routine. The exercises</p>
-              <p>below will be performed on Monday, Tuesday, Thursday and Friday. Your off days</p>
-              <p>are Wednesday, Saturday and Sunday. You may add accessory exercises on your off</p>
-              <p>days or after your workouts, but it's suggested that you take one full day off</p>
-              <p>after working out for two consecutive days. On Monday your lifts will be based</p>
-              <p>on a percentage of your max, and the percentage will increase on Tuesday and then</p>
-              <p>again on Thursday. On Friday you will deload and the percentage of weight you will</p>
-              <p>lift will be less than the percentage you did on Monday.</p>
-              <h2>It's { this.stringDay(this.intDay()) }</h2>
-              <WorkoutTable bench={ user.max_bench } 
-                            op={ user.max_press }
-                            dead={ user.max_deadlift }
-                            squat={ user.max_squat }
-                            day={ this.intDay() }
-              />
-            </div>
-          )}
-      </div>
-      
-   );
+    const authenticated = this.props.user_has_authenticated
+
+    if(authenticated === true) {
+      return (
+        <div>
+             {this.state.users.map(user =>
+                  <div className="workout">
+                 <h1>Hello {user.name}!</h1>
+           
+           
+         
+                 <h2>Since your primary goal is to {user.primary_goal}:</h2>
+                 <p>Your customized workout is based on a weekly full body routine. The exercises</p>
+                 <p>below will be performed on Monday, Tuesday, Thursday and Friday. Your off days</p>
+                 <p>are Wednesday, Saturday and Sunday. You may add accessory exercises on your off</p>
+                 <p>days or after your workouts, but it's suggested that you take one full day off</p>
+                 <p>after working out for two consecutive days. On Monday your lifts will be based</p>
+                 <p>on a percentage of your max, and the percentage will increase on Tuesday and then</p>
+                 <p>again on Thursday. On Friday you will deload and the percentage of weight you will</p>
+                 <p>lift will be less than the percentage you did on Monday.</p>
+                 <h2>It's { this.stringDay(this.intDay()) }</h2>
+                 <WorkoutTable bench={ user.max_bench } 
+                               op={ user.max_press }
+                               dead={ user.max_deadlift }
+                               squat={ user.max_squat }
+                               day={ this.intDay() }
+                 />
+               </div>
+             )}
+         </div>
+         
+      );
+    } else {
+      alert("Please log in first")
+    }
+   
   }
 }
 

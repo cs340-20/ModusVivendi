@@ -33,7 +33,7 @@ app.post('/api/login/', (req, res)  => {
 	/* Very vulnerable code. Just for testing purposes */
 	const username = req.body.username
 	const password = req.body.password
-
+	console.log(username)
 	if(username === users[0].username) {
 
 		if(password === users[0].password) {

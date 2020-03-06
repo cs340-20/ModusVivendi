@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.css'
+import './bootstrap/dist/css/bootstrap.min.css'
 import MainNavbar from './components/navbar/navbar'
 import Registration from './components/Registration/Registration'
 import Loginpage from './components/loginpage/login'
@@ -20,7 +20,7 @@ function App() {
 
     return (
     <div className="App">
-        <Router appProps={{is_authenticated, user_has_authenticated}}>
+        <Router>
             <MainNavbar />
             <Switch>
                 <AppliedRoute exact path="/" component={Home} appProps={appProps} />
