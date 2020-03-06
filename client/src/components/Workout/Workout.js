@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import WorkoutTable from './WorkoutTable';
 import './Workout.css';
+import { Button, ButtonGroup } from 'reactstrap';
 
 class Workout extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
-      users: []
+      showComponent: false,
+      users: [],
+      nextDay: null,
+      nextDayStr: null
     };
+    this._onButtonClick = this._onButtonClick.bind(this);
+  }
+
+  _onButtonClick() {
+    this.setState({
+      showComponent: true,
+    });
   }
 
   componentDidMount() {
@@ -48,6 +58,23 @@ class Workout extends Component {
   render() {
     const authenticated = this.props.user_has_authenticated
 
+    if(this.intDay() == 1) {
+      this.nextDay = 2;
+      this.nextDayStr = "Tuesday";
+    }
+    else if(this.intDay() == 2 || this.intDay() == 3) {
+      this.nextDay = 4;
+      this.nextDayStr = "Thursday";
+    }
+    else if(this.intDay() == 4) {
+      this.nextDay = 5;
+      this.nextDayStr = "Friday";
+    }
+    else {
+      this.nextDay = 1;
+      this.nextDayStr = "Monday";
+    }
+
       return (
         <div>
              {this.state.users.map(user =>
@@ -66,12 +93,24 @@ class Workout extends Component {
                  <p>again on Thursday. On Friday you will deload and the percentage of weight you will</p>
                  <p>lift will be less than the percentage you did on Monday.</p>
                  <h2>It's { this.stringDay(this.intDay()) }</h2>
+
                  <WorkoutTable bench={ user.max_bench } 
                                op={ user.max_press }
                                dead={ user.max_deadlift }
                                squat={ user.max_squat }
                                day={ this.intDay() }
                  />
+                 <hr />
+                 <h4>Look Ahead:</h4>
+                  <Button onClick={ this._onButtonClick }>{ this.nextDayStr }</Button>
+                    { this.state.showComponent ? 
+                    <WorkoutTable bench={ user.max_bench } 
+                                  op={ user.max_press }
+                                  dead={ user.max_deadlift }
+                                  squat={ user.max_squat }
+                                  day={ this.nextDay }
+                    /> : 
+                    null }
                </div>
              )}
          </div>
