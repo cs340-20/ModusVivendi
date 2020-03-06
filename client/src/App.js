@@ -27,7 +27,7 @@ function App() {
                 <AppliedRoute path="/home" component={Home} appProps={appProps} />
                 <AppliedRoute path="/registration" component={Registration} appProps={appProps} />
                 <AppliedRoute path="/login" component={Loginpage} appProps={appProps} />
-                <AppliedRoute path="/workout" component={Workout} appProps={appProps} />
+                <AppliedRoute path="/workout" component={Workout} workout_login={appProps} />
                 <AppliedRoute path="/diet" component={Diet} appProps={appProps} />
             </Switch>
         </Router>

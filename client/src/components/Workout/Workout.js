@@ -3,8 +3,9 @@ import WorkoutTable from './WorkoutTable';
 import './Workout.css';
 
 class Workout extends Component {
-  constructor() {
-    super();
+
+  constructor(props) {
+    super(props);
     this.state = {
       users: []
     };
@@ -45,6 +46,7 @@ class Workout extends Component {
   }
 
   render() {
+    console.log(this.props.workout_login)
     return (
      <div>
           {this.state.users.map(user =>
