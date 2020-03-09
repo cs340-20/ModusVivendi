@@ -15,7 +15,7 @@ h1{
       font-size: 100px;
 }
 p {
-  test-align: center;
+    text-align: center;
 }
 
 diet {
