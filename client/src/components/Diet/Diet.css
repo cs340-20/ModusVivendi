@@ -9,12 +9,12 @@
 }
 
 
-h1{
+.h1{
     text-align: center;
     font-face:main;
       font-size: 100px;
 }
-p{
+.p {
   test-align: center;
 }
 
@@ -22,7 +22,7 @@ p{
     background-color: white;
 }
 
-h2 {
+.h2 {
     text-align: center;
     margin-top: 20px;
     font-face: sec;
