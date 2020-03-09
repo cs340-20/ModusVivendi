@@ -1,9 +1,10 @@
 .workout {
     text-align: center;
 }
-h1, p {
+h1 {
     text-align: center;
     font-face:main;
+    font-size: 100px;
 }
 
 .heading {
