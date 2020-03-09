@@ -1,7 +1,10 @@
 .workout {
     text-align: center;
 }
-
+h1, p {
+    text-align: center;
+    font-face:main;
+}
 
 .heading {
     text-align: center; 
@@ -13,6 +16,3 @@
     text-decoration: underline;
 }
 
-p {
-    margin-bottom: 0;
-}
