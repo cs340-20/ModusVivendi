@@ -11,23 +11,31 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import AppliedRoute from './components/AppliedRoute'
 
 
+
+
 function App() {
 
     /* State variables */
     const [is_authenticated, user_has_authenticated] = useState(false)
 
-    const appProps = {is_authenticated, user_has_authenticated}
 
+    let appProps = {is_authenticated, user_has_authenticated, username: "Login/Register", change_username: (u) => {change_u(u) }}
+
+    const change_u = (u) => {
+        appProps.username = u
+        console.log(appProps.username)
+    }
+    
     return (
     <div className="App">
         <Router>
-            <MainNavbar />
+            <MainNavbar appProps={appProps} />
             <Switch>
                 <AppliedRoute exact path="/" component={Home} appProps={appProps} />
                 <AppliedRoute path="/home" component={Home} appProps={appProps} />
                 <AppliedRoute path="/registration" component={Registration} appProps={appProps} />
                 <AppliedRoute path="/login" component={Loginpage} appProps={appProps} />
-                <AppliedRoute path="/workout" component={Workout} workout_login={appProps} />
+                <AppliedRoute path="/workout" component={Workout} appProps={appProps} />
                 <AppliedRoute path="/diet" component={Diet} appProps={appProps} />
             </Switch>
         </Router>
