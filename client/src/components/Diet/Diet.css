@@ -9,16 +9,20 @@
 }
 
 
-h1, p {
+.h1{
     text-align: center;
     font-face:main;
+      font-size: 100px;
+}
+.p {
+  test-align: center;
 }
 
 .diet {
     background-color: white;
 }
 
-h2 {
+.h2 {
     text-align: center;
     margin-top: 20px;
     font-face: sec;
