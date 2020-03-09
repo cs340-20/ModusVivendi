@@ -75,7 +75,8 @@ class Workout extends Component {
 
     const authenticated = this.props.is_authenticated
     console.log(authenticated)
-      return (
+      if(authenticated === true) {
+        return (
         <div>
              {this.state.users.map(user =>
                   <div className="workout">
@@ -115,8 +116,9 @@ class Workout extends Component {
              )}
          </div>
          
-      )
-   
+      );
+    }
+    else return null;
   }
 }
 

@@ -16,22 +16,27 @@ class Diet extends Component {
   }
 
   render() {
-    return (
-     <div>
-          {this.state.users.map(user =>
-               <div className="diet">
-                   <DietTable name={ user.name } 
-                              goal={ user.primary_goal }
-                              gender={ user.gender }
-                              age={ user.age }
-                              height={ user.height }
-                              weight={ user.weight }
-                   />
-               </div>
-          )}
-      </div>
-      
-   );
+    const authenticated = this.props.is_authenticated
+    console.log(authenticated)
+    if(authenticated === true) {
+      return (
+      <div>
+            {this.state.users.map(user =>
+                <div className="diet">
+                    <DietTable name={ user.name } 
+                                goal={ user.primary_goal }
+                                gender={ user.gender }
+                                age={ user.age }
+                                height={ user.height }
+                                weight={ user.weight }
+                    />
+                </div>
+            )}
+        </div>
+        
+      );
+    }
+    else return null;
   }
 }
 
