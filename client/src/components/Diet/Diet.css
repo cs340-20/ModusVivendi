@@ -14,6 +14,9 @@ h1{
     font-face:main;
       font-size: 100px;
 }
+p{
+  test-align: center;
+}
 
 .diet {
     background-color: white;
