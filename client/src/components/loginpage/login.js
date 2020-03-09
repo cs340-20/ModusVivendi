@@ -40,6 +40,7 @@ function login(username, password, props) {
         else if(data === 'invalid_password')
             alert('Invalid Password')
         else if(data === 'logged_in') {
+            props.change_username(username)
             props.user_has_authenticated(true)
         }
     })

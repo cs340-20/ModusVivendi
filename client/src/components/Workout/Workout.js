@@ -56,8 +56,6 @@ class Workout extends Component {
   }
 
   render() {
-    const authenticated = this.props.user_has_authenticated
-
     if(this.intDay() === 1) {
       this.nextDay = 2;
       this.nextDayStr = "Tuesday";
@@ -75,6 +73,8 @@ class Workout extends Component {
       this.nextDayStr = "Monday";
     }
 
+    const authenticated = this.props.is_authenticated
+    console.log(authenticated)
       return (
         <div>
              {this.state.users.map(user =>

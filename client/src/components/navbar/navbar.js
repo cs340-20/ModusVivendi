@@ -9,7 +9,16 @@ import "./navbar.css"
 
 export default class MainNavbar extends Component {
 
+    componentDidUpdate(p) {
+        console.log(p)
+        this.props.appProps.username = p.appProps.username
+    }
+
     render() {
+        // window.setInterval(()  => {
+        //     console.log(this.props.appProps)
+        // }, 1000)
+        console.log(this.props.appProps)
         return (  
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-1">
@@ -31,7 +40,7 @@ export default class MainNavbar extends Component {
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
                     <Link className="btn btn-outline-success my-2 my-sm-0" type="submit" to="/login">
-                       Login/Register
+                       {this.props.appProps.username}
                     </Link>
                     </form>
                 </div>
