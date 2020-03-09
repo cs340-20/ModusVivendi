@@ -58,15 +58,15 @@ class Workout extends Component {
   render() {
     const authenticated = this.props.user_has_authenticated
 
-    if(this.intDay() == 1) {
+    if(this.intDay() === 1) {
       this.nextDay = 2;
       this.nextDayStr = "Tuesday";
     }
-    else if(this.intDay() == 2 || this.intDay() == 3) {
+    else if(this.intDay() === 2 || this.intDay() === 3) {
       this.nextDay = 4;
       this.nextDayStr = "Thursday";
     }
-    else if(this.intDay() == 4) {
+    else if(this.intDay() === 4) {
       this.nextDay = 5;
       this.nextDayStr = "Friday";
     }
