@@ -12,6 +12,7 @@ export default class MainNavbar extends Component {
     componentDidUpdate(p) {
         console.log(p)
         this.props.appProps.username = p.appProps.username
+        document.getElementById("login_button").innerText = this.props.appProps.username
     }
 
     render() {
@@ -39,7 +40,7 @@ export default class MainNavbar extends Component {
                     </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
-                    <Link className="btn btn-outline-success my-2 my-sm-0" type="submit" to="/login">
+                    <Link className="btn btn-outline-success my-2 my-sm-0" id="login_button" type="submit" to="/login">
                        {this.props.appProps.username}
                     </Link>
                     </form>
