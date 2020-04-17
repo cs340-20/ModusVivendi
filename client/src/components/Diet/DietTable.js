@@ -24,8 +24,8 @@ function calorie_calc(age, weight, height, gender) {
 
     // Return value based on goal
     return {
-        lose: Math.round(bmr - 500),
-        gain: Math.round(bmr + 500),
+        lose: Math.round(bmr-500),
+        gain: Math.round(bmr+500),
         maintain: Math.round(bmr)
     };
 }
@@ -37,7 +37,7 @@ function macro_nutrients(calories, weight) {
     calories-=protein*4;
 
     let fats = 0.35*weight;
-    calories-=fats*9;
+    calories -= fats*9;
 
     let carbs = calories/4;
 
