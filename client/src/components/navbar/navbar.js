@@ -1,18 +1,38 @@
 import React, { Component } from 'react'
 import {
     BrowserRouter as Router,
-    Link
+    Link,
+    Redirect
 } from 'react-router-dom'
 import logo from '../../images/MV_resize.png'
 import "../../bootstrap/dist/css/bootstrap.min.css"
 import "./navbar.css"
 
+let redirected = false 
+
 export default class MainNavbar extends Component {
 
+    state = {
+        redirect: false 
+    }
+
+    setRedirect = () => {
+        this.setState({redirect: true})
+    }
+
+    renderRedirect = () => {
+        if(this.state.redirect) {
+            return <Redirect to='/workout' />
+        }
+    }
+    
     componentDidUpdate(p) {
         console.log(p)
         this.props.appProps.username = p.appProps.username
         document.getElementById("login_button").innerText = this.props.appProps.username
+        if(redirected === false)
+            this.setRedirect()
+        redirected = true
     }
 
     render() {
@@ -44,6 +64,7 @@ export default class MainNavbar extends Component {
                        {this.props.appProps.username}
                     </Link>
                     </form>
+                    {this.renderRedirect()}
                 </div>
             </nav>
         </div>  

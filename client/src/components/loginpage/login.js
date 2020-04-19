@@ -3,6 +3,8 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './login.css'
 
+let redirect = false 
+
 /* Attempt a login request */
 function login(username, password, props) {
     
@@ -42,11 +44,13 @@ function login(username, password, props) {
         else if(data === 'logged_in') {
             props.change_username(username)
             props.user_has_authenticated(true)
+            //window.location = '/home'
         }
     })
 }
 
 const Loginpage = (props) => {
+    
     return (
     <div>
         <Form >
