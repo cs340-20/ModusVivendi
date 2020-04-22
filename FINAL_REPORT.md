@@ -29,6 +29,9 @@ Our fitness app combines the benefits of tracking macronutrients and physical fi
 
 We initially planned on using mongodb to set up a database, but we were not able to implement the food database due to time constraints and the global COVID-19 pandemic messing with everyone’s schedule. 
 
+<em>Screenshot of working example (workout portion):</em> <br>
+![workout-page](workout-page.jpeg)
+
 ## Project Management
 We completed nearly all of our goals. After the status report update, we realized that we were not going to be able to include the food database and went with the approach of laying out your nutritional facts based on your statistics(height, weight, etc) and leaving it completely up to the user to find the right foods. In doing this, we were able to still get the message across: here’s what you need to intake for the day.
 
